@@ -1,11 +1,11 @@
 package com.flow.pages;
 
-import com.flow.drivers.DriverSingleton;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.flow.drivers.DriverSingleton;
 
 public class LoginPage {
     private WebDriver driver;
@@ -15,11 +15,13 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@id='username']")
+    @FindBy(name = "username")
     WebElement txtUsername;
-    @FindBy(xpath = "//input[@id='password']")
+
+    @FindBy(name = "password")
     WebElement txtPassword;
-    @FindBy(xpath = "//button[normalize-space()='Sign In']")
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div/div[2]/form/div[3]/button")
     WebElement btnSignIn;
     @FindBy(xpath = "//h1[normalize-space()='Dashboard']")
     WebElement txtDashboardPage;
