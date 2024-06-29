@@ -1,3 +1,6 @@
+# File Failed Test Screenshoot
+/FailedTestScreenshot
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

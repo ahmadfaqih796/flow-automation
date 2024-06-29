@@ -1,7 +1,7 @@
 package com.flow.stepdefinitions;
 
 import com.flow.hooks.Hooks;
-import com.flow.pages.LoginPage;
+import com.flow.pages.auth.LoginPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.Given;
@@ -29,6 +29,7 @@ public class TestLogin {
 
     @Then("Menampilkan halaman login {string}")
     public void menampilkan_halaman_login(String expect) {
+        System.out.println(loginPage.getTitlePage().contains(expect));
         Assert.assertTrue(loginPage.getTitlePage().contains(expect));
         extentTest.log(LogStatus.PASS, "Menampilkan halaman login");
     }
@@ -54,6 +55,7 @@ public class TestLogin {
 
     @Then("Berhasil login dan menampilkan halaman dashboard {string}")
     public void berhasil_login_dan_menampilkan_halaman_dashboard(String txtDashboardPage) {
+        System.out.println(txtDashboardPage);
         if (txtDashboardPage.contains("Gagal!")) {
             Assert.assertTrue(loginPage.getTextInvalidCredentials().contains(txtDashboardPage));
             extentTest.log(LogStatus.PASS, "Menampilkan alert Invalid Credentials");

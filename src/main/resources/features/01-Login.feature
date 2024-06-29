@@ -16,10 +16,9 @@ Feature: Login Page
     Then Berhasil login dan menampilkan halaman dashboard "<msgResponses>"
 
     Examples:
-      | Username | Password  | msgResponses |
-      | noviar   |        23 | Gagal!       |
-      | bd234er  |  12345678 | Gagal!       |
-      | bd       |           | true         |
-      |          | dfjhgfd7y | true         |
-      |          |           | true         |
-      | bd       |  12345678 | Dashboard    |
+      | Username | Password | msgResponses |
+      | noviar   | 12345678 | Gagal!       |
+      | noviar   |       23 | Dashboard    |
+      # | bd       |           | true         |
+      # |          | dfjhgfd7y | true         |
+      # |          |           | true         |

@@ -1,4 +1,4 @@
-package com.flow.pages;
+package com.flow.pages.auth;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,14 +21,23 @@ public class LoginPage {
     @FindBy(name = "password")
     WebElement txtPassword;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div/div[2]/form/div[3]/button")
+    @FindBy(xpath = "//button[normalize-space()='Login']")
     WebElement btnSignIn;
+
     @FindBy(xpath = "//h1[normalize-space()='Dashboard']")
     WebElement txtDashboardPage;
+
     @FindBy(xpath = "//div[@class='brand']")
     WebElement txtLoginPage;
+
     @FindBy(xpath = "//strong[normalize-space()='Gagal!']")
     WebElement invalidCredentials;
+
+    @FindBy(xpath = "//div[contains(text(),'Username required')]")
+    WebElement requiredUsername;
+
+    @FindBy(xpath = "//div[contains(text(),'Please enter password')]")
+    WebElement requiredPassword;
 
     public void setTxtUsername(String username) {
         this.txtUsername.clear();
