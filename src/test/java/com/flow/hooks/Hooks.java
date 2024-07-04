@@ -8,7 +8,9 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.IOException;
 
@@ -47,11 +49,17 @@ public class Hooks {
         DriverSingleton.closeObjectInstance();
     }
 
-    public static void delay(long second) {
+    public static void delay(double second) {
+        Long timeSleep = (long) second*1000;
         try {
-            Thread.sleep(second * 1000);
+            Thread.sleep(timeSleep);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void enter(){
+        Actions action = new Actions(driver);
+        action.sendKeys(Keys.ENTER).build().perform();
     }
 }

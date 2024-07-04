@@ -20,53 +20,55 @@ public class TestLogin {
         extentTest = Hooks.extentTest;
     }
 
-    @Given("Input url web lamar {string}")
-    public void input_url_web_lamar(String Url) {
+    @Given("Input url web {string}")
+    public void input_url_web(String Url) {
         driver.get(Url);
-        extentTest.log(LogStatus.PASS, "Input url web lamar");
+        extentTest.log(LogStatus.PASS, "Input url web");
         Hooks.delay(1);
     }
 
     @Then("Menampilkan halaman login {string}")
     public void menampilkan_halaman_login(String expect) {
-        System.out.println(loginPage.getTitlePage().contains(expect));
-        Assert.assertTrue(loginPage.getTitlePage().contains(expect));
-        extentTest.log(LogStatus.PASS, "Menampilkan halaman login");
+        if (expect.equals("true")) {
+            Assert.assertEquals(loginPage.getTitlePage(), expect);
+            extentTest.log(LogStatus.PASS, "Menampilkan halaman login");
+        } else {
+            Assert.assertEquals(loginPage.getTitlePage(), expect);
+            extentTest.log(LogStatus.FAIL, "Gagal Menampilkan halaman login");
+        }
+        // System.out.println(loginPage.getTitlePage().contains(expect));
     }
 
     @When("User input username {string}")
     public void user_input_username(String username) {
+        Hooks.delay(1);
         loginPage.setTxtUsername(username);
         extentTest.log(LogStatus.PASS, "User input username");
     }
 
     @When("User input password {string}")
     public void user_input_password(String password) {
+        Hooks.delay(1);
         loginPage.setTxtPassword(password);
         extentTest.log(LogStatus.PASS, "User input password");
     }
 
-    @When("Klik tombol Sign In")
-    public void klik_tombol_sign_in() {
-        loginPage.clickBtnSignIn();
-        Hooks.delay(1);
+    @When("Klik tombol Sign In {string}")
+    public void klik_tombol_sign_in(String statusTest) {
+        Hooks.delay(0.5);
+        loginPage.clickBtn();
         extentTest.log(LogStatus.PASS, "Klik Tombol Sign In");
     }
 
     @Then("Berhasil login dan menampilkan halaman dashboard {string}")
     public void berhasil_login_dan_menampilkan_halaman_dashboard(String txtDashboardPage) {
-        System.out.println(txtDashboardPage);
-        if (txtDashboardPage.contains("Gagal!")) {
-            Assert.assertTrue(loginPage.getTextInvalidCredentials().contains(txtDashboardPage));
+        Hooks.delay(1);
+        if (txtDashboardPage.contains("Failed")) {
+            Assert.assertEquals(loginPage.getTextInvalidCredentials(), "Invalid user and password");
+            loginPage.clickAlertBtn();
             extentTest.log(LogStatus.PASS, "Menampilkan alert Invalid Credentials");
-            Hooks.delay(1);
-        } else if (txtDashboardPage.contains("true")) {
-            Assert.assertTrue(loginPage.getRequired().contains(txtDashboardPage));
-            extentTest.log(LogStatus.PASS, "Menampilkan pesan required");
         } else if (txtDashboardPage.contains("Dashboard")) {
-            driver.switchTo().alert().accept();
-            Hooks.delay(2);
-            Assert.assertTrue(loginPage.getTextDashboardPage().contains(txtDashboardPage));
+            Assert.assertTrue(loginPage.getTextDashboardPage().contains("SMART FLOW"));
             extentTest.log(LogStatus.PASS, "Menampilkan halaman dashboard");
             Hooks.delay(1);
         }

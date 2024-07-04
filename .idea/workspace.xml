@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c43eeaf2-248a-4b1b-98d2-35a1de9193ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628112303.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628112311.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628113555.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628113603.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628113743.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_access_url_login_page_20240628113746.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112321.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112331.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112342.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112352.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112403.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628112413.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113614.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113625.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113635.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113646.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113656.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113706.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FailedTestScreenshot/Check_login_page_20240628113757.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/drivers/DriverSingleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/drivers/strategies/Chrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/drivers/strategies/DriverStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/drivers/strategies/DriverStrategyImplementer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/drivers/strategies/Firefox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/utils/TestScenarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flow/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/features/01-Login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/flow/hooks/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/flow/stepdefinitions/TestLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/flow/testrunner/TestRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flow/pages/auth/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flow/pages/auth/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/features/01-Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/features/01-Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/flow/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/flow/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/flow/stepdefinitions/TestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/flow/stepdefinitions/TestLogin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2iUV3PvOy5pHICEoNjQMvUXeF5G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -63,20 +30,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.TestRun.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.TestRun.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TestRun" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="flow" />

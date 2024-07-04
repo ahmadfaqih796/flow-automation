@@ -15,27 +15,29 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
+    // Input
     @FindBy(name = "username")
     WebElement txtUsername;
-
     @FindBy(name = "password")
     WebElement txtPassword;
 
+    // Button
     @FindBy(xpath = "//button[normalize-space()='Login']")
     WebElement btnSignIn;
+    @FindBy(xpath = "//a[normalize-space()='Ok']")
+    WebElement btnAlert;
 
-    @FindBy(xpath = "//h1[normalize-space()='Dashboard']")
+    // Text
+    @FindBy(xpath = "//*[contains(text(), 'SMART FLOW')]")
     WebElement txtDashboardPage;
-
-    @FindBy(xpath = "//div[@class='brand']")
+    @FindBy(xpath = "//h1[normalize-space()='Welcome']")
     WebElement txtLoginPage;
-
-    @FindBy(xpath = "//strong[normalize-space()='Gagal!']")
+    @FindBy(xpath = "//div[normalize-space()='Invalid user and password']")
     WebElement invalidCredentials;
 
+    // Required
     @FindBy(xpath = "//div[contains(text(),'Username required')]")
     WebElement requiredUsername;
-
     @FindBy(xpath = "//div[contains(text(),'Please enter password')]")
     WebElement requiredPassword;
 
@@ -49,8 +51,12 @@ public class LoginPage {
         this.txtPassword.sendKeys(password);
     }
 
-    public void clickBtnSignIn() {
+    public void clickBtn() {
         this.btnSignIn.click();
+    }
+
+    public void clickAlertBtn() {
+        this.btnAlert.click();
     }
 
     public void loginUser(String username, String password) {
@@ -77,7 +83,7 @@ public class LoginPage {
         String titlePageLogin = driver.getTitle();
         if (titlePageNotFound.contains("404 Page Not Found")) {
             resultTitle = titlePageNotFound;
-        } else if (titlePageLogin.contains("Login Page | PT DIKA")) {
+        } else if (titlePageLogin.contains("FLOW")) {
             resultTitle = titlePageLogin;
         }
         return resultTitle;
@@ -86,4 +92,5 @@ public class LoginPage {
     public String getRequired() {
         return this.txtUsername.getAttribute("required");
     }
+
 }
